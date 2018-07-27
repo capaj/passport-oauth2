@@ -1,9 +1,10 @@
 {
-  "name": "passport-oauth2",
-  "version": "1.4.0",
-  "description": "OAuth 2.0 authentication strategy for Passport.",
+  "name": "passport-centrify-oauth2",
+  "version": "1.4.1",
+  "description": "forked OAuth 2.0 authentication strategy for Passport to suit the needs of centrify",
   "keywords": [
     "passport",
+    "centrify",
     "auth",
     "authn",
     "authentication",
@@ -12,17 +13,23 @@
     "oauth",
     "oauth2"
   ],
-  "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
-  },
+  "contributors": [
+    {
+      "name": "Jiri Spac",
+      "email": "capajj@gmail.com"
+    },
+    {
+      "name": "Jared Hanson",
+      "email": "jaredhanson@gmail.com",
+      "url": "http://www.jaredhanson.net/"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-oauth2.git"
+    "url": "git://github.com/capaj/passport-centrify-oauth2.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-oauth2/issues"
+    "url": "http://github.com/capaj/passport-centrify-oauth2/issues"
   },
   "license": "MIT",
   "licenses": [
@@ -33,8 +40,9 @@
   ],
   "main": "./lib",
   "dependencies": {
+    "debug": "^3.1.0",
     "oauth": "0.9.x",
-    "passport-strategy": "1.x.x",
+    "passport-strategy": "1.0.0",
     "uid2": "0.0.x",
     "utils-merge": "1.x.x"
   },
@@ -45,7 +53,7 @@
     "chai-passport-strategy": "1.x.x"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 4"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
